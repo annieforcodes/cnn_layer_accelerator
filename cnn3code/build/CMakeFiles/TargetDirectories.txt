@@ -1,0 +1,3 @@
+C:/vitisws/cnn3code/build/CMakeFiles/cnn3code.elf.dir
+C:/vitisws/cnn3code/build/CMakeFiles/edit_cache.dir
+C:/vitisws/cnn3code/build/CMakeFiles/rebuild_cache.dir

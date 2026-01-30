@@ -1,0 +1,12 @@
+[
+{
+  "directory": "C:/vitisws/cnn3code/build",
+  "command": "C:\\Xilinx\\2025.1\\Vitis\\gnu\\aarch32\\nt\\gcc-arm-none-eabi\\bin\\arm-none-eabi-gcc.exe -isystem C:/vitisws/cnn3platform/export/cnn3platform/sw/standalone_ps7_cortexa9_0/include -isystem C:/Xilinx/2025.1/gnu/aarch32/nt/gcc-arm-none-eabi/x86_64-oesdk-mingw32/usr/lib/arm-xilinx-eabi/gcc/arm-xilinx-eabi/13.3.0/include -isystem C:/Xilinx/2025.1/gnu/aarch32/nt/gcc-arm-none-eabi/x86_64-oesdk-mingw32/usr/lib/arm-xilinx-eabi/gcc/arm-xilinx-eabi/13.3.0/include-fixed -isystem C:/Xilinx/2025.1/Vitis/gnu/aarch32/nt/gcc-arm-none-eabi/aarch32-xilinx-eabi/usr/include  -DSDT -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard  -MMD -MP -specs=C:/vitisws/cnn3platform/export/cnn3platform/sw/standalone_ps7_cortexa9_0/Xilinx.spec -IC:/vitisws/cnn3platform/export/cnn3platform/sw/standalone_ps7_cortexa9_0/include -Wall -Wextra      -O0  -g3     -U__clang__ -o CMakeFiles\\cnn3code.elf.dir\\helloworld.c.obj -c C:\\vitisws\\cnn3code\\src\\helloworld.c",
+  "file": "C:\\vitisws\\cnn3code\\src\\helloworld.c"
+},
+{
+  "directory": "C:/vitisws/cnn3code/build",
+  "command": "C:\\Xilinx\\2025.1\\Vitis\\gnu\\aarch32\\nt\\gcc-arm-none-eabi\\bin\\arm-none-eabi-gcc.exe -isystem C:/vitisws/cnn3platform/export/cnn3platform/sw/standalone_ps7_cortexa9_0/include -isystem C:/Xilinx/2025.1/gnu/aarch32/nt/gcc-arm-none-eabi/x86_64-oesdk-mingw32/usr/lib/arm-xilinx-eabi/gcc/arm-xilinx-eabi/13.3.0/include -isystem C:/Xilinx/2025.1/gnu/aarch32/nt/gcc-arm-none-eabi/x86_64-oesdk-mingw32/usr/lib/arm-xilinx-eabi/gcc/arm-xilinx-eabi/13.3.0/include-fixed -isystem C:/Xilinx/2025.1/Vitis/gnu/aarch32/nt/gcc-arm-none-eabi/aarch32-xilinx-eabi/usr/include  -DSDT -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard  -MMD -MP -specs=C:/vitisws/cnn3platform/export/cnn3platform/sw/standalone_ps7_cortexa9_0/Xilinx.spec -IC:/vitisws/cnn3platform/export/cnn3platform/sw/standalone_ps7_cortexa9_0/include -Wall -Wextra      -O0  -g3     -U__clang__ -o CMakeFiles\\cnn3code.elf.dir\\platform.c.obj -c C:\\vitisws\\cnn3code\\src\\platform.c",
+  "file": "C:\\vitisws\\cnn3code\\src\\platform.c"
+}
+]
