@@ -13,11 +13,8 @@ The accelerator was developed as an RTL design, functionally verified through si
 * Uses **parallel multiply–accumulate (MAC) operations** for pixel computation
 * **Register-based pixel buffering** to store a 3×3 neighborhood of pixels
 * **Sliding window control logic** to manage pixel data for convolution
-* Modular architecture with clearly separated control and datapath
-* FSM-based control unit for deterministic operation
-* Correctly handles **one-cycle read latency** of synchronous memories (e.g., FPGA BRAM)
-* Fully synthesizable Verilog design
-* Verified using **self-written unit and integration-level testbenches**
+* FSM-based 
+* Verified using **testbenches**
 
 ---
 
