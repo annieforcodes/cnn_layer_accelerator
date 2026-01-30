@@ -1,7 +1,0 @@
-Running: xsim.dir/single_pixel_conv_tb_behav/xsimk.exe -simmode gui -wdb single_pixel_conv_tb_behav.wdb -simrunnum 0 -socket 61685
-Design successfully loaded
-Design Loading Memory Usage: 28644 KB (Peak: 28644 KB)
-Design Loading CPU Usage: 702 ms
-Simulation completed
-Simulation Memory Usage: 29524 KB (Peak: 29524 KB)
-Simulation CPU Usage: 796 ms

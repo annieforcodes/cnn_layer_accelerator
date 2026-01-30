@@ -1,5 +1,0 @@
-Time resolution is 1 ps
-Starting final system test...
-Success! Accelerator raised the 'done' flag.
-VERIFICATION PASSED: Result matches the expected value of 5361.
-$finish called at time : 225 ns : File "C:/Users/Anumita Samaddar/cnn_layer_accelerator/cnn_layer_accelerator.srcs/sim_1/new/tb_final_accelerator.v" Line 62
