@@ -1,21 +1,67 @@
-# Simple CNN Convolution Layer Accelerator in Verilog
+# Simple CNN Convolution Layer Accelerator (Verilog)
 
-This project is a hardware accelerator for a 3x3 2D convolution, designed and verified entirely in Verilog. The 2D convolution is the core mathematical operation used in Convolutional Neural Networks (CNNs) for image processing and computer vision.
+This project implements a **hardware accelerator for a 3×3 2D convolution**, designed in **Verilog**.
+The 2D convolution operation is a core building block in **Convolutional Neural Networks (CNNs)** used for image processing and computer vision applications.
 
-This accelerator is designed as a software-only, simulation-based project.
+The accelerator was developed as an RTL design, functionally verified through simulation, and later integrated with a **Zynq SoC** using an **AXI4-Lite interface** as part of a hardware–software co-design flow.
+
+---
+
 ## Features
--   Implements a 3x3 convolution engine for 8-bit grayscale pixel data.
--   Modular architecture with separate modules for control, memory, and processing.
--   Control logic is implemented with a robust Finite State Machine (FSM).
--   Correctly handles the one-clock-cycle read latency of synchronous memories (like FPGA Block RAMs).
--   Includes a complete verification environment with unit and integration-level testbenches.
--   The design is fully synthesizable.
 
-## Architecture
-The accelerator is composed of three main modules integrated into a top-level design:
-1.  **`control_unit`**: An FSM-based controller that orchestrates the data flow. It generates addresses for the memory and control signals for the datapath.
-2.  **`image_memory`**: A synchronous-read memory block, pre-loaded with sample image data for the simulation.
-3.  **`single_pixel_conv`**: A purely combinational processing element that performs the nine multiply-accumulate (MAC) operations for a single output pixel.
+* Implements a **3×3 convolution engine** for 8-bit grayscale pixel data
+* Uses **parallel multiply–accumulate (MAC) operations** for pixel computation
+* **Register-based pixel buffering** to store a 3×3 neighborhood of pixels
+* **Sliding window control logic** to manage pixel data for convolution
+* Modular architecture with clearly separated control and datapath
+* FSM-based control unit for deterministic operation
+* Correctly handles **one-cycle read latency** of synchronous memories (e.g., FPGA BRAM)
+* Fully synthesizable Verilog design
+* Verified using **self-written unit and integration-level testbenches**
 
-A 3x3 register file (`pixel_patch`) is used in the top-level module to buffer the pixel data between the single-port memory and the parallel-input processing element.
+---
+
+## Architecture Overview
+
+The accelerator is composed of the following main modules, integrated in a top-level design:
+
+* **control_unit**
+  FSM-based controller responsible for sequencing operations, generating memory addresses, and asserting control signals.
+
+* **image_memory**
+  A synchronous-read memory module used to model image data access during simulation and integration.
+
+* **single_pixel_conv**
+  A purely combinational processing element that performs the **nine multiply–accumulate (MAC)** operations required to compute one output pixel.
+
+* **pixel buffering (pixel_patch)**
+  A 3×3 register file used to buffer pixel data between the memory and the processing element, enabling parallel access to neighboring pixels during convolution.
+
+---
+
+## Zynq SoC Integration
+
+* The accelerator is wrapped with an **AXI4-Lite slave interface**
+* Integrated with the **Zynq Processing System (PS)**
+* Output pixel values are exposed through **memory-mapped registers**
+* The design follows an end-to-end **Vivado → Vitis** workflow, including platform creation and BSP configuration
+
+---
+
+## Status
+
+* Hardware accelerator implemented and verified via simulation
+* AXI4-Lite integration with Zynq PS completed
+* Software-side interaction and UART-based output under development
+
+---
+
+## Tools & Technologies
+
+Language: Verilog
+Tools: Vivado, Vitis
+Platform: Zynq SoC
+
+
+
 
